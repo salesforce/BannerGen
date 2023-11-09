@@ -45,7 +45,7 @@ open_clip_torch==2.20.0
 openai
 opencv-python==4.5.5.64
 paddleocr>=2.0.1
-Pillow==9.5.0
+Pillow==10.0.1
 pudb==2019.2
 protobuf>=3.20.0
 pydevd-pycharm~=212.5457.59
