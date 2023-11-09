@@ -1,0 +1,1 @@
+[{"xyxy": [201.0, 275.0, 1452.0, 916.0], "kind": "image"}, {"xyxy": [254.0, 136.0, 1394.0, 218.0], "kind": "type", "label": "header", "font_color": [111, 51, 41, 255], "font_name": "GaramondPremrPro", "font_size": 83, "text": "Lorem ipsum dolor sit amet consecti!\r", "char_length": 37, "alignment": 2}]
