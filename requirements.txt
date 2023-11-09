@@ -74,6 +74,6 @@ torch-fidelity==0.3.0
 torch>=1.10.1
 torchmetrics
 tqdm
-transformers==4.20.1
+transformers==4.30.0
 virtualenv
 wandb
