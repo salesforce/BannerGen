@@ -8,8 +8,8 @@ import torch
 from torch.utils.data import Dataset
 from torchvision import transforms
 
-from SmartCropping.datasets import register
-from SmartCropping.utils import to_pixel_samples
+from RetrieveAdapter.SmartCropping.datasets import register
+from RetrieveAdapter.SmartCropping.utils import to_pixel_samples
 
 
 @register('sr-implicit-paired')

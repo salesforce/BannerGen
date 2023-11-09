@@ -10,20 +10,19 @@ import math
 
 import torch
 from facenet_pytorch import MTCNN
-from SmartCropping.U_2_Net.model import U2NET  # full size version 173.6 MB
-from SmartCropping.U_2_Net.data_loader import SalObjDataset, RescaleT, ToTensorLab
+from RetrieveAdapter.SmartCropping.U_2_Net.model import U2NET  # full size version 173.6 MB
+from RetrieveAdapter.SmartCropping.U_2_Net.data_loader import SalObjDataset, RescaleT, ToTensorLab
 from torch.utils.data import DataLoader
 from torchvision import transforms
 from torch.autograd import Variable
 from scipy.ndimage import label
-import SmartCropping.models
+import RetrieveAdapter.SmartCropping.models
 from paddleocr import PaddleOCR
 
 import time
-from SmartCropping.utils import make_coord
-from SmartCropping.test import batched_predict
+from RetrieveAdapter.SmartCropping.utils import make_coord
+from RetrieveAdapter.SmartCropping.test import batched_predict
 import sys
-import pdb
 
 
 def auto_resize(image, target_width, target_height, model):
@@ -42,10 +41,8 @@ def auto_resize(image, target_width, target_height, model):
         need_upsize = w > width
 
     if need_upsize:
-        print('Auto upsizing...')
         image = cv2.resize(image, (w, h), cv2.INTER_CUBIC)
     else:
-        print('Auto downsizing...')
         image = cv2.resize(image, (w, h), cv2.INTER_AREA)
 
     return image
@@ -225,7 +222,6 @@ def normPRED(d):
 
 
 def boxes_of_saliencies_onetime(original, mdl_s):
-    t_saliency_start = time.time()
     test_salobj_dataset = SalObjDataset(img_name_list=[original],
                                         lbl_name_list=[],
                                         transform=transforms.Compose([RescaleT(320),
@@ -260,13 +256,11 @@ def boxes_of_saliencies_onetime(original, mdl_s):
         x1 = np.amax(x_label) / 320.0 * float(original.shape[1])
         y1 = np.amax(y_label) / 320.0 * float(original.shape[0])
         boxes.append([int((x0 + x1) / 2), int((y0 + y1) / 2), int(x1 - x0), int(y1 - y0)])
-    t_saliency_end = time.time()
-    print('Saliency detection time: ', t_saliency_end - t_saliency_start)
+
     return boxes
 
 
 def boxes_of_saliencies(original, original_for_draw, mdl_s):
-    t_saliency_start = time.time()
     test_salobj_dataset = SalObjDataset(img_name_list=[original],
                                         lbl_name_list=[],
                                         transform=transforms.Compose([RescaleT(320),
@@ -305,8 +299,6 @@ def boxes_of_saliencies(original, original_for_draw, mdl_s):
         draw.rectangle([int(x0), int(y0), int(x1), int(y1)], outline=(0, 255, 0), width=3)
         draw.rectangle([int((x0 + x1) / 2), int((y0 + y1) / 2), int((x0 + x1) / 2) + 1, int((y0 + y1) / 2) + 1],
                        outline=(0, 255, 0), width=3)
-    t_saliency_end = time.time()
-    print('Saliency detection time: ', t_saliency_end - t_saliency_start)
     return boxes, original_for_draw, cv2.resize(pred, (original.shape[1], original.shape[0]))
 
 
@@ -444,10 +436,7 @@ def smart_crop(image, saliencies, target_width, target_height, do_resize, text_p
     center, original_for_draw = auto_center(original, saliencies, target_width, target_height, text_prioritized,
                                             face_prioritized, model_saliency)
 
-    print('Found center at', center)
-
     crop_pos = exact_crop(center, width, height, target_width, target_height)
-    print('Crop rectangle is', crop_pos)
 
     return original[int(crop_pos['top']): int(crop_pos['bottom']), int(crop_pos['left']): int(crop_pos['right'])]
 

@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-import SmartCropping.models
-from SmartCropping.models import register
-from SmartCropping.utils import make_coord
+import RetrieveAdapter.SmartCropping.models
+from RetrieveAdapter.SmartCropping.models import register
+from RetrieveAdapter.SmartCropping.utils import make_coord
 
 
 @register('metasr')

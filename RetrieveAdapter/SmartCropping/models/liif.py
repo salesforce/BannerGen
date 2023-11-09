@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from SmartCropping import models
-from SmartCropping.models import register
-from SmartCropping.utils import make_coord
+from RetrieveAdapter.SmartCropping import models
+from RetrieveAdapter.SmartCropping.models import register
+from RetrieveAdapter.SmartCropping.utils import make_coord
 
 
 @register('liif')

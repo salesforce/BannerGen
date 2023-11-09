@@ -12,7 +12,7 @@ import math
 import torch
 from torch import nn
 
-from detr_util.misc import NestedTensor
+from LayoutDETR.detr_util.misc import NestedTensor
 
 
 class PositionEmbeddingSine(nn.Module):

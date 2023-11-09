@@ -4,7 +4,7 @@ from argparse import Namespace
 import torch
 import torch.nn as nn
 
-from SmartCropping.models import register
+from RetrieveAdapter.SmartCropping.models import register
 
 
 def default_conv(in_channels, out_channels, kernel_size, bias=True):
