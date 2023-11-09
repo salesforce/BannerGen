@@ -1,0 +1,1 @@
+[{"xyxy": [60, 1136, 547, 1157], "label": "disclaimer / footnote", "font_color": [255, 255, 255, 255]}, {"xyxy": [149, 836, 442, 897], "label": "button", "font_color": [255, 161, 157, 245]}, {"xyxy": [61, 440, 543, 592], "label": "body", "font_color": [255, 255, 255, 255]}, {"xyxy": [45, 104, 562, 269], "label": "header", "font_color": [255, 240, 246, 157]}]

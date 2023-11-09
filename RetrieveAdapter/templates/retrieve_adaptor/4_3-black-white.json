@@ -1,0 +1,1 @@
+[{"xyxy": [602.0, 147.0, 1528.0, 755.0], "kind": "image"}, {"xyxy": [47.0, 267.0, 547.0, 593.0], "kind": "type", "label": "header", "font_color": [229, 229, 229, 255], "font_name": "SofiaPro-Regular", "font_size": 83, "text": "Lorem ipsum dolor\rSIT AMET\r", "char_length": 27, "alignment": 2}]
