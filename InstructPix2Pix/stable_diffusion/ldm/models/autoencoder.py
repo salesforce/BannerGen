@@ -3,12 +3,12 @@ import pytorch_lightning as pl
 import torch.nn.functional as F
 from contextlib import contextmanager
 
-from taming.modules.vqvae.quantize import VectorQuantizer2 as VectorQuantizer
+from utils.quantize import VectorQuantizer2 as VectorQuantizer
 
-from ldm.modules.diffusionmodules.model import Encoder, Decoder
-from ldm.modules.distributions.distributions import DiagonalGaussianDistribution
+from InstructPix2Pix.stable_diffusion.ldm.modules.diffusionmodules.model import Encoder, Decoder
+from InstructPix2Pix.stable_diffusion.ldm.modules.distributions.distributions import DiagonalGaussianDistribution
 
-from ldm.util import instantiate_from_config
+from InstructPix2Pix.stable_diffusion.ldm.util import instantiate_from_config
 
 
 class VQModel(pl.LightningModule):
@@ -83,11 +83,7 @@ class VQModel(pl.LightningModule):
                 if k.startswith(ik):
                     print("Deleting key {} from state_dict.".format(k))
                     del sd[k]
-        missing, unexpected = self.load_state_dict(sd, strict=False)
-        print(f"Restored from {path} with {len(missing)} missing and {len(unexpected)} unexpected keys")
-        if len(missing) > 0:
-            print(f"Missing Keys: {missing}")
-            print(f"Unexpected Keys: {unexpected}")
+        self.load_state_dict(sd, strict=False)
 
     def on_train_batch_end(self, *args, **kwargs):
         if self.use_ema:

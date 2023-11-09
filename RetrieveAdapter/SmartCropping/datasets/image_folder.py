@@ -9,7 +9,7 @@ import torch
 from torch.utils.data import Dataset
 from torchvision import transforms
 
-from SmartCropping.datasets import register
+from RetrieveAdapter.SmartCropping.datasets import register
 
 
 @register('image-folder')

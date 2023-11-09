@@ -425,12 +425,7 @@ def smart_crop(image, target_width, target_height, destination, do_resize, text_
         print('Warning: target wider than image')
 
     center, original_for_draw = auto_center(image, original, target_width, target_height, text_prioritized, face_prioritized)
-
-    print('Found center at', center)
-
     crop_pos = exact_crop(center, width, height, target_width, target_height)
-    print('Crop rectangle is', crop_pos)
-
     if draw_bboxes:
         original_for_draw = np.array(original_for_draw.convert('RGB'))[:, :, ::-1].copy() 
         cropped = original_for_draw[int(crop_pos['top']): int(crop_pos['bottom']), int(crop_pos['left']): int(crop_pos['right'])]

@@ -17,8 +17,8 @@ from pytorch_lightning.callbacks import ModelCheckpoint, Callback, LearningRateM
 from pytorch_lightning.utilities.distributed import rank_zero_only
 from pytorch_lightning.utilities import rank_zero_info
 
-from ldm.data.base import Txt2ImgIterableBaseDataset
-from ldm.util import instantiate_from_config
+from InstructPix2Pix.stable_diffusion.ldm.data.base import Txt2ImgIterableBaseDataset
+from InstructPix2Pix.stable_diffusion.ldm.util import instantiate_from_config
 
 
 def get_parser(**parser_kwargs):

@@ -160,12 +160,7 @@ def smart_crop(image, target_width, target_height, destination, do_resize):
         print('Warning: target wider than image')
 
     center = auto_center(original, target_width, target_height)
-
-    print('Found center at', center)
-
     crop_pos = exact_crop(center, width, height, target_width, target_height)
-    print('Crop rectangle is', crop_pos)
-
     cropped = original[int(crop_pos['top']): int(crop_pos['bottom']), int(crop_pos['left']): int(crop_pos['right'])]
     cv2.imwrite(destination, cropped)
 

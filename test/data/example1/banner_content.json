@@ -1,0 +1,37 @@
+{
+  "task" : "banner",
+  "contentStyle" : {
+    "elements" : [
+      {
+        "type" : "body",
+        "text" : "The woman behind the popular Instagram account sat down with us to discuss her work as a designer and her latest project.",
+        "style" : {
+          "fontFamily" : "Arial",
+          "color" : "#FFFFFF"
+        }
+      },
+      {
+        "type" : "header",
+        "text" : "Cait Pappas Q&A",
+        "style" : {
+          "fontFamily" : "Arial",
+          "color" : "#FFFFFF",
+          "fontFormat" : "bold"
+        }
+      },
+      {
+        "type" : "button",
+        "text" : "READ MORE",
+        "buttonParams" : {
+          "backgroundColor" : "#0000FF",
+          "backgroundImage" : "",
+          "radius" : 8
+        },
+        "style" : {
+          "fontFamily" : "Bayon-Regular",
+          "color" : "#FFFFFF"
+        }
+      }
+    ]
+  }
+}

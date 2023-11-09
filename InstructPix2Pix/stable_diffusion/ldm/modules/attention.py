@@ -8,7 +8,7 @@ import torch.nn.functional as F
 from torch import nn, einsum
 from einops import rearrange, repeat
 
-from ldm.modules.diffusionmodules.util import checkpoint
+from InstructPix2Pix.stable_diffusion.ldm.modules.diffusionmodules.util import checkpoint
 
 
 def exists(val):
