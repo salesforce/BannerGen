@@ -63,7 +63,7 @@ app.add_url_rule(
 app.add_url_rule(
     "/generated/<name>", endpoint="generated_files", build_only=True
 )
-app.root_path = '/home/Claude'
+app.root_path = '/home/BannerGen'
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 # Uncomment this line if you are making a Cross domain request

@@ -420,15 +420,6 @@ def save_bboxes_with_background(boxes, masks, labels, background_orig, path):
 
 #----------------------------------------------------------------------------
 
-def load_model(model_dir):
-    model_path = os.path.join(model_dir, 'ads_multi.pkl')
-    print('Loading networks from "%s"...' % model_path)
-    device = torch.device('cuda')
-    with dnnlib.util.open_url(model_path) as f:
-        G = legacy.load_network_pkl(f)['G_ema'].to(device)  # type: ignore
-
-    return G
-
 def generate_banners(
     G: str,
     bg: str,

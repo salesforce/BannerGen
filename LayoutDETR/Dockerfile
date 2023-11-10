@@ -68,11 +68,11 @@ RUN pip install \
 
 # Exposing applicaiton on 5000 so that it can be accessible on default host(127.0.0.1) and port(5000).
 EXPOSE 5000
-RUN mkdir -p /home/Claude
-WORKDIR /home/Claude
+RUN mkdir -p /home/BannerGen
+WORKDIR /home/BannerGen
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-COPY . /home/Claude
+COPY . /home/BannerGen
 COPY ../chromedriver /usr/bin/chromedriver
 COPY activations.py /opt/conda/lib/python3.8/site-packages/transformers/activations.py
 RUN DEBIAN_FRONTEND=noninteractive apt-get --assume-yes install ../google-chrome-stable_current_amd64.deb

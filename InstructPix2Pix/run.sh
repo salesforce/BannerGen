@@ -1,4 +1,4 @@
-export PYTHONPATH=$PYTHONPATH:/home/Claude
+export PYTHONPATH=$PYTHONPATH:/home/BannerGen
 export FLASK_ENV=development
 export FLASK_APP=e2e_pipeline/api_server.py
 flask run --host=0.0.0.0 --port 3000

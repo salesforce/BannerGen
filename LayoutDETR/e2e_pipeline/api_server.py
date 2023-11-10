@@ -29,7 +29,7 @@ from flask_cors import CORS
 from selenium import webdriver
 from werkzeug.utils import secure_filename
 
-from gen_single_sample_API_server import generate_banners, load_model
+from gen_single_sample_API_server import generate_banners
 from utils_server import safeMakeDirs, generate_htmls
 from selenium import webdriver
 from selenium.webdriver import Chrome
@@ -57,7 +57,7 @@ app.add_url_rule(
 app.add_url_rule(
     "/generated/<name>", endpoint="generated_files", build_only=True
 )
-app.root_path = '/home/Claude'
+app.root_path = '/home/BannerGen'
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 # Uncomment this line if you are making a Cross domain request
@@ -66,6 +66,15 @@ CORS(app)
 # model dictionary
 loaded_models = {}
 browser = None
+
+
+def load_model(model_path):
+    print('Loading networks from "%s"...' % model_path)
+    device = torch.device('cuda')
+    with dnnlib.util.open_url(model_path) as f:
+        G = legacy.load_network_pkl(f)['G_ema'].to(device)  # type: ignore
+
+    return G
 
 # Testing URL
 @app.route('/hello/', methods=['GET', 'POST'])

@@ -61,12 +61,12 @@ RUN pip install \
     ipywidgets \
     pydevd-pycharm~=212.5457.59
 
-WORKDIR /home/Claude
+WORKDIR /home/BannerGen
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 COPY . .
 COPY ../chromedriver /usr/bin/chromedriver
-RUN DEBIAN_FRONTEND=noninteractive apt-get --assume-yes install ../google-chrome-stable_current_amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive apt-get --assume-yes install ../executables/google-chrome-stable_current_amd64.deb
 RUN chmod a+x run.sh
 # Comment this line below if you do not want to auto start the server
 ENTRYPOINT sh run.sh

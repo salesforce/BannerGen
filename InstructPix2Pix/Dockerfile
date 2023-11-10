@@ -29,13 +29,13 @@ WORKDIR /home/
 RUN pip install --upgrade pip
 RUN git clone https://github.com/huggingface/transformers.git
 RUN pip install -q ./transformers
-RUN mkdir -p /home/Claude
-WORKDIR /home/Claude
-COPY . /home/Claude
+RUN mkdir -p /home/BannerGen
+WORKDIR /home/BannerGen
+COPY . /home/BannerGen
 RUN pip install -r requirements.txt
 COPY chromedriver /usr/bin/chromedriver
 COPY quantize.py /opt/conda/lib/python3.8/site-packages/taming/modules/vqvae/quantize.py
-RUN DEBIAN_FRONTEND=noninteractive apt-get --assume-yes install ./google-chrome-stable_current_amd64.deb
+RUN DEBIAN_FRONTEND=noninteractive apt-get --assume-yes install executables/google-chrome-stable_current_amd64.deb
 RUN chmod a+x run.sh
 ENV CONTAINER_NAME "InstructPix2Pix"
 # Comment this line below if you do not want to auto start the server
