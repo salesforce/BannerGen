@@ -14,10 +14,8 @@ which are achieved by leveraging advanced generative AI technologies. Specifical
 - [LayoutInstructPix2Pix](./InstructPix2Pix)
 - [Framed Template Retrieve Adapter](./RetrieveAdapter)
 
-You can find more details in our [blog post](https://bannergen.placeholder).
-
 # Table of Contents
-  - [Library Design](#library-design)
+  - [Library Design](#library-design-blog)
   - [Getting Started](#getting-started)
     - [Installation](#installation)
     - [Model Download](#model-download)
@@ -26,7 +24,7 @@ You can find more details in our [blog post](https://bannergen.placeholder).
   - [License](#license)
   - [Citation](#citation)
   - [Contact Us](#contact-us)
-## Library Design
+## Library Design ([blog](https://bannergen.placeholder))
 <img src="./LibraryDesign.png" width=500>
 
 ## Getting Started
