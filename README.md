@@ -1,4 +1,7 @@
 # BannerGen - A Library for Multi-Modality Banner Generation 
+[Chia-Chih Chen](https://scholar.google.com/citations?user=0Hr1SOUAAAAJ&hl=en), [Ning Yu](https://ningyu1991.github.io/), [Zeyuan Chen](https://www.linkedin.com/in/zeyuan-chen-0253b6141/), [Shu Zhang](https://scholar.google.com/citations?user=k9zsuBIAAAAJ&hl=en), [Ran Xu](https://www.linkedin.com/in/ran-x-a2765924/)
+
+Salesforce Research
 
 ## Introduction
 Salesforce BannerGen library aims to help graphical designers 
@@ -6,32 +9,13 @@ Salesforce BannerGen library aims to help graphical designers
 - scale produtivity
 - bring forward creative ideas
 
-which are achieved by leveraging advanced generative AI technologies. Specifically, BannerGen is composed of 3 proprietary multi-modal banner generation methods, namely
-- LayoutDETR
-- LayoutInstructPix2Pix
-- Framed Template Retrieve Adapter
+which are achieved by leveraging advanced generative AI technologies. Specifically, BannerGen is composed of 3 proprietary multi-modal banner generation methods in parallel, namely
+- [LayoutDETR](./LayoutDETR)
+- [LayoutInstructPix2Pix](./InstructPix2Pix)
+- [Framed Template Retrieve Adapter](./RetrieveAdapter)
 
-## Blog Post and Citing BannerGen
 You can find more details in our [blog post](https://bannergen.placeholder).
-**If you're using BannerGen in your research or applications, please cite it with the following BibTeX**:
-```bibtex
-@inproceedings{yu2023layoutdetr,
-    title = "LayoutDETR: Detection Transformer Is a Good Multimodal Layout Designer",
-    author = "Ning Yu and 
-    Chia-Chih Chen and 
-    Zeyuan Chen and 
-    Rui Meng and 
-    Gang Wu and
-    Paul Josel and
-    Juan Carlos Niebles and
-    Caiming Xiong and
-    Ran Xu",
-    year = 2023,
-    eprint= 2212.09877,
-    archivePrefix = arXiv,
-    primaryClass = cs.CV,
-}
-```
+
 # Table of Contents
   - [Library Design](#libdesign)
   - [Getting Started](#libdesign)
@@ -39,10 +23,11 @@ You can find more details in our [blog post](https://bannergen.placeholder).
     - [Model Download](#model-download)
     - [Usage](#usage)
   - [Ethical and Responsible Use](#ethical-and-responsible-use)
-  - [Contact Us](#contact)
   - [License](#license)
+  - [Citation](#citation)
+  - [Contact Us](#contact-us)
 ## Library Design
-<img src="./LibraryDesign.png">
+<img src="./LibraryDesign.png" width=500>
 
 ## Getting Started
 ### Environment
@@ -76,9 +61,17 @@ To test your own images and/or different types of banner texts, simply assign im
 ## Ethical and Responsible Use
 We note that models in BannerGen provide no guarantees on their multimodal abilities; ill-aligned or biased generations may be observed. In particular, the datasets and pretrained models utilized in BannerGen may contain socioeconomic biases. We plan to improve the library by investigating and mitigating these potential biases and inappropriate behaviors in the future.
 
-
-## Contact us
-If you have any questions, comments or suggestions, please do not hesitate to contact us at [{ning.yu, ran.xu}@salesforce.com](mailto:ning.yu@salesforce.com?subject=[GitHub]%20Source%20Han%20Sans) .
-
 ## License
 Please refer to [BSD 3-Clause License](LICENSE.txt). We do NOT own the licenses to the fonts stored in `RetrieveAdapter/templates/css/fonts`. To use the fonts in your own work, please acquire the employed font licenses from the respective owners.
+
+## Citation
+  ```
+  @inproceedings{yu2023layoutdetr,
+      title={LayoutDETR: Detection Transformer Is a Good Multimodal Layout Designer},
+      author={Ning Yu and Chia-Chih Chen and Zeyuan Chen and Rui Meng and Gang Wu and Paul Josel and Juan Carlos Niebles and Caiming Xiong and Ran Xu},
+      year={2023},
+  }
+  ```
+
+## Contact us
+If you have any questions, comments or suggestions, please do not hesitate to contact us at [ning.yu@salesforce.com](mailto:ning.yu@salesforce.com); [ran.xu@salesforce.com](mailto:ran.xu@salesforce.com).
