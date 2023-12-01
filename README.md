@@ -17,8 +17,8 @@ which are achieved by leveraging advanced generative AI technologies. Specifical
 You can find more details in our [blog post](https://bannergen.placeholder).
 
 # Table of Contents
-  - [Library Design](#libdesign)
-  - [Getting Started](#libdesign)
+  - [Library Design](#library-design)
+  - [Getting Started](#getting-started)
     - [Installation](#installation)
     - [Model Download](#model-download)
     - [Usage](#usage)
