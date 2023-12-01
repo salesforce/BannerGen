@@ -60,7 +60,7 @@ To test your own images and/or different types of banner texts, simply assign im
 We note that models in BannerGen provide no guarantees on their multimodal abilities; ill-aligned or biased generations may be observed. In particular, the datasets and pretrained models utilized in BannerGen may contain socioeconomic biases. We plan to improve the library by investigating and mitigating these potential biases and inappropriate behaviors in the future.
 
 ## License
-Please refer to [BSD 3-Clause License](LICENSE.txt). We do NOT own the licenses to the fonts stored in `RetrieveAdapter/templates/css/fonts`. To use the fonts in your own work, please acquire the employed font licenses from the respective owners.
+This work refers to the [Apache License 2.0](LICENSE.txt). For LayoutDETR, refer to their license [here](https://github.com/salesforce/LayoutDETR/blob/main/LICENSE.txt). For LayoutInstructPix2Pix, refer to InstructPix2Pix's license [here](https://github.com/timothybrooks/instruct-pix2pix/blob/main/LICENSE). We do NOT own the licenses to the fonts stored in `RetrieveAdapter/templates/css/fonts`. To use the fonts in your own work, please acquire the employed font licenses from the respective owners.
 
 ## Citation
   ```
@@ -71,5 +71,5 @@ Please refer to [BSD 3-Clause License](LICENSE.txt). We do NOT own the licenses 
   }
   ```
 
-## Contact us
-If you have any questions, comments or suggestions, please do not hesitate to contact us at [ning.yu@salesforce.com](mailto:ning.yu@salesforce.com); [ran.xu@salesforce.com](mailto:ran.xu@salesforce.com).
+## Contact Us
+If you have any questions, comments or suggestions, please do not hesitate to contact Ning Yu at [ning.yu@salesforce.com](mailto:ning.yu@salesforce.com) and Ran Xu at [ran.xu@salesforce.com](mailto:ran.xu@salesforce.com).
