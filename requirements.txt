@@ -29,6 +29,10 @@ pytorch-lightning==2.0.7
 pytorch-pretrained-BERT
 pyyaml
 requests
+numpy==1.23.5
+scipy
+opencv-python
+opencv-python-headless<4.3
 scikit-image
 scikit-learn
 seaborn==0.11.2
@@ -48,7 +52,3 @@ transformers==4.20.1
 virtualenv
 wandb
 fairscale
-numpy==1.23.5
-scipy
-opencv-python==4.5.5.64
-opencv-python-headless<4.3
