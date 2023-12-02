@@ -62,10 +62,16 @@ BannerGen targets to generate ad banners given a background image and multiple t
   ```
 - Check the resulting banner HTML files and PNG images in `./result/`. We provide the rendered banner in HTML format to facilitate further manual layout manipulation. Simultaneously, we screenshot the HTML banner and save it as a PNG image, representing the final output.
 
-To test with your own background images and/or different types of foreground texts, simply assign image path `--image_path` and the corresponding text types. Here we support header text input using `--header_text`, body text input using `--body_text`, and button text input using `--button_text`. You can customize the number of output banners using `--num_result` and the output path using `--output_path`.
+To test with your own background images and/or different types of foreground texts, simply assign image path `--image_path` and the corresponding text types. Here we support header text input using `--header_text`, body text input using `--body_text`, and button text input using `--button_text`. You can customize the number of output banners using `--num_result` and the output directory path using `--output_path`.
 - For example,
   ```
-  python banner_gen.py --model_name=LayoutDETR --model_path=./weights/ --image_path=test/data/example1/burning.jpg --header_text='The problem with burning' --body_text='Exploring the science behind combustion.' --button_text='LEARN ALL ABOUT IT' --num_result=6 --output_path=./result/
+  python banner_gen.py --model_name=LayoutDETR --model_path=./weights/ \
+  --image_path=test/data/example1/burning.jpg \
+  --header_text='The problem with burning' \
+  --body_text='Exploring the science behind combustion.' \
+  --button_text='LEARN ALL ABOUT IT' \
+  --num_result=6 \
+  --output_path=./result/
   ```
 
 ## License
