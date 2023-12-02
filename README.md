@@ -33,7 +33,7 @@ This library has been tested on Ubuntu 20.04 including Python 3.8 and PyTorch 2.
 
 To install the environment, use the following command lines:
 ```
-git clone git@github.com:salesforce/BannerGen.git
+git clone https://github.com/salesforce/BannerGen.git
 cd BannerGen
 chmod +x setup.sh
 ./setup.sh
