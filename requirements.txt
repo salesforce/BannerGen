@@ -15,8 +15,6 @@ lmdb==1.2.1
 mujoco-py==1.50.1.56
 omegaconf==2.3.0
 open_clip_torch==2.20.0
-opencv-python==4.5.5.64
-opencv-python-headless==4.2.0.34
 paddleocr>=2.7.0.3
 paddlepaddle
 Pillow==10.1.0
@@ -33,7 +31,6 @@ pyyaml
 requests
 scikit-image
 scikit-learn
-scipy
 seaborn==0.11.2
 selenium==4.6.1
 six
@@ -50,3 +47,8 @@ tqdm
 transformers==4.20.1
 virtualenv
 wandb
+fairscale
+numpy==1.23.5
+scipy
+opencv-python==4.5.5.64
+opencv-python-headless<4.3
