@@ -23,7 +23,6 @@ which are achieved by leveraging advanced generative AI technologies. Specifical
     - [Environment Installation](#environment-installation)
     - [Model Weights Download](#model-weights-download)
     - [Usage](#usage)
-  - [Ethical and Responsible Use](#ethical-and-responsible-use)
   - [License](#license)
   - [Citation](#citation)
   - [Contact Us](#contact-us)
@@ -44,7 +43,7 @@ chmod +x setup.sh
 ```
 
 ### Model Weights Download
-You can login to your google account to download BannerGen models [here](https://console.cloud.google.com/storage/browser/sfr-bannergen-data-research). Please point `banner_gen.py` using `--model_path` to the local directory where you downloaded the models. The purpose of each model file can be looked up in `BANNER_GEN_MODEL_MAPPER`dictionary in `banner_gen.py`.
+You can login to your google account to download BannerGen models [here](https://console.cloud.google.com/storage/browser/sfr-bannergen-data-research). Please point `banner_gen.py` using `--model_path` to the local directory where you downloaded the models, e.g., `./weights/`. The purpose of each model file can be looked up in `BANNER_GEN_MODEL_MAPPER`dictionary in `banner_gen.py`.
 
 ### Usage
 BannerGen targets to generate ad banners given a background image and multiple types of foreground texts. `banner_gen.py` serves as a demo file to illustrate how to initialize headless browser for rendering and how to import, configure, and call the two essential fuctions in each of the three banner generation methods. These two functions are `load_model` and `generate_banners`. To test a specific method simply assign `--model_name` and point `--model_path` to where you downloaded the model files. Rest of the arguments will be set to the default values and data stored in the repo `./test/` directory.
@@ -68,9 +67,6 @@ To test with your own background images and/or different types of foreground tex
   ```
   python banner_gen.py --model_name=LayoutDETR --model_path=./weights/ --image_path=test/data/example1/dark_flooring.jpg --header_text='EVERYTHING 10% OFF' --body_text='Friends & Family Savings Event' --button_text='SHOP NOW' --num_result=3 --output_path=./result/
   ```
-
-## Ethical and Responsible Use
-We note that models in BannerGen provide no guarantees on their multimodal abilities; ill-aligned or biased generations may be observed. In particular, the datasets and pretrained models utilized in BannerGen may contain socioeconomic biases. We plan to improve the library by investigating and mitigating these potential biases and inappropriate behaviors in the future.
 
 ## License
 This work refers to the [Apache License 2.0](LICENSE.txt). For LayoutDETR, refer to their license [here](https://github.com/salesforce/LayoutDETR/blob/main/LICENSE.txt). For LayoutInstructPix2Pix, refer to InstructPix2Pix's license [here](https://github.com/timothybrooks/instruct-pix2pix/blob/main/LICENSE). We do NOT own the licenses to the fonts stored in `RetrieveAdapter/templates/css/fonts`. To use the fonts in your own work, please acquire the employed font licenses from the respective owners.
