@@ -65,7 +65,7 @@ BannerGen targets to generate ad banners given a background image and multiple t
 To test with your own background images and/or different types of foreground texts, simply assign image path `--image_path` and the corresponding text types. Here we support header text input using `--header_text`, body text input using `--body_text`, and button text input using `--button_text`. You can customize the number of output banners using `--num_result` and the output path using `--output_path`.
 - For example,
   ```
-  python banner_gen.py --model_name=LayoutDETR --model_path=./weights/ --image_path=test/data/example1/dark_flooring.jpg --header_text='EVERYTHING 10% OFF' --body_text='Friends & Family Savings Event' --button_text='SHOP NOW' --num_result=3 --output_path=./result/
+  python banner_gen.py --model_name=LayoutDETR --model_path=./weights/ --image_path=test/data/example1/burning.jpg --header_text='The problem with burning' --body_text='Exploring the science behind combustion.' --button_text='LEARN ALL ABOUT IT' --num_result=6 --output_path=./result/
   ```
 
 ## License
