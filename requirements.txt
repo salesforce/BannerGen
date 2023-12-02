@@ -1,3 +1,7 @@
+numpy==1.23.5
+scipy
+opencv-python
+opencv-python-headless<4.3
 albumentations==0.4.3
 bs4==0.0.1
 datasets==2.8.0
@@ -29,10 +33,6 @@ pytorch-lightning==2.0.7
 pytorch-pretrained-BERT
 pyyaml
 requests
-numpy==1.23.5
-scipy
-opencv-python
-opencv-python-headless<4.3
 scikit-image
 scikit-learn
 seaborn==0.11.2
