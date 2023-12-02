@@ -3,16 +3,8 @@
   "contentStyle" : {
     "elements" : [
       {
-        "type" : "body",
-        "text" : "Friends & Family Savings Event",
-        "style" : {
-          "fontFamily" : "Arial",
-          "color" : "#FFFFFF"
-        }
-      },
-      {
         "type" : "header",
-        "text" : "EVERYTHING 10% OFF",
+        "text" : "The problem with burning",
         "style" : {
           "fontFamily" : "Arial",
           "color" : "#FFFFFF",
@@ -20,8 +12,16 @@
         }
       },
       {
+        "type" : "body",
+        "text" : "Exploring the science behind combustion.",
+        "style" : {
+          "fontFamily" : "Arial",
+          "color" : "#FFFFFF"
+        }
+      },
+      {
         "type" : "button",
-        "text" : "SHOP NOW",
+        "text" : "LEARN ALL ABOUT IT",
         "buttonParams" : {
           "backgroundColor" : "#0000FF",
           "backgroundImage" : "",
