@@ -4,12 +4,13 @@
 Salesforce Research
 
 ## Introduction
-Salesforce BannerGen library aims to help graphical designers 
+Salesforce BannerGen library aims to help graphical designers
+- generate ad banners given a background image and multiple types of foreground texts 
 - simpilfy workflow
 - scale produtivity
 - bring forward creative ideas
 
-which are achieved by leveraging advanced generative AI technologies. Specifically, BannerGen is composed of 3 proprietary multi-modal banner generation methods in parallel, namely
+which are achieved by leveraging advanced generative AI technologies. Specifically, BannerGen is composed of three proprietary multi-modal banner generation methods in parallel, namely
 - [LayoutDETR](./LayoutDETR)
 - [LayoutInstructPix2Pix](./InstructPix2Pix)
 - [Framed Template Retrieve Adapter](./RetrieveAdapter)
@@ -18,12 +19,13 @@ which are achieved by leveraging advanced generative AI technologies. Specifical
   - [Library Design](#library-design-blog)
   - [Getting Started](#getting-started)
     - [Environment Installation](#environment-installation)
-    - [Model Download](#model-download)
+    - [Model Weights Download](#model-weights-download)
     - [Usage](#usage)
   - [Ethical and Responsible Use](#ethical-and-responsible-use)
   - [License](#license)
   - [Citation](#citation)
   - [Contact Us](#contact-us)
+
 ## Library Design ([blog](https://bannergen.placeholder))
 <img src="./LibraryDesign.png" width=500>
 
@@ -39,21 +41,31 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-### Model Download
-You can login to your google account to download BannerGen models [here](https://console.cloud.google.com/storage/browser/sfr-bannergen-data-research). Please point `banner_gen.py` `--model_path` to the local directory where you downloaded the models. The purpose of each model file can be looked up in `BANNER_GEN_MODEL_MAPPER`dictionary in `banner_gen.py`.
+### Model Weights Download
+You can login to your google account to download BannerGen models [here](https://console.cloud.google.com/storage/browser/sfr-bannergen-data-research). Please point `banner_gen.py` using `--model_path` to the local directory where you downloaded the models. The purpose of each model file can be looked up in `BANNER_GEN_MODEL_MAPPER`dictionary in `banner_gen.py`.
 
 ### Usage
-`banner_gen.py` serves as a demo file to illustrate how to initialize headless browser for rendering and how to import, configure, and call the 2 essential fuctions in each of the 3 banner generation methods. These 2 functions are `load_model` and `generate_banners`. To test a specific method simply assign `--model_name` and point `--model_path` to where you downloaded the model files. Rest of the arguments will be set to the default values and data stored in the repo `test` directory.
-
-To test your own images and/or different types of banner texts, simply assign image path `--image` and the corresponding text types. Here we support header, body, and button as text inputs. 
+BannerGen targets to generate ad banners given a background image and multiple types of foreground texts. `banner_gen.py` serves as a demo file to illustrate how to initialize headless browser for rendering and how to import, configure, and call the two essential fuctions in each of the three banner generation methods. These two functions are `load_model` and `generate_banners`. To test a specific method simply assign `--model_name` and point `--model_path` to where you downloaded the model files. Rest of the arguments will be set to the default values and data stored in the repo `./test/` directory.
 
 - Test LayoutDETR
-  - python banner_gen.py --model_path=/export/share/chiachihchen/BANNERS --model_name=LayoutDETR
-- Test InstructPix2Pix
-  - python banner_gen.py --model_path=/export/share/chiachihchen/BANNERS --model_name=InstructPix2Pix
+  ```
+  python banner_gen.py --model_name=LayoutDETR --model_path=./weights/
+  ```
+- Test LayoutInstructPix2Pix
+  ```
+  python banner_gen.py --model_name=InstructPix2Pix --model_path=./weights/
+  ```
 - Test RetrieveAdapter
-  - python banner_gen.py --model_path=/export/share/chiachihchen/BANNERS --model_name=RetrieveAdapter
-- Check result banner image and html files in ./result
+  ```
+  python banner_gen.py --model_name=RetrieveAdapter --model_path=./weights/
+  ```
+- Check the resulting banner HTML files and PNG images in `./result/`. We provide the rendered banner in HTML format to facilitate further manual layout manipulation. Simultaneously, we screenshot the HTML banner and save it as a PNG image, representing the final output.
+
+To test with your own background images and/or different types of foreground texts, simply assign image path `--image_path` and the corresponding text types. Here we support header text input using `--header_text`, body text input using `--body_text`, and button text input using `--button_text`. You can customize the number of output banners using `--num_result` and the output path using `--output_path`.
+- For example,
+  ```
+  python banner_gen.py --model_name=LayoutDETR --model_path=weights/ --image_path=test/data/example1/dark_flooring.jpg --header_text='EVERYTHING 10% OFF' --body_text='Friends & Family Savings Event' --button_text='SHOP NOW' --num_result=3 --output_path=./result/
+  ```
 
 ## Ethical and Responsible Use
 We note that models in BannerGen provide no guarantees on their multimodal abilities; ill-aligned or biased generations may be observed. In particular, the datasets and pretrained models utilized in BannerGen may contain socioeconomic biases. We plan to improve the library by investigating and mitigating these potential biases and inappropriate behaviors in the future.
