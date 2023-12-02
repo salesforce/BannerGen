@@ -377,7 +377,7 @@ def visualize_banner(boxes, masks, styles, is_center, background_img, browser, g
     screenshot = Image.open(BytesIO(screenshot))
     screenshot = screenshot.crop([0, 0, W_page, H_page])
     if W_page > BannerConfig.MAX_TIMG_WIDTH or H_page > BannerConfig.MAX_TIMG_HEIGHT:
-        screenshot.thumbnail((BannerConfig.MAX_TIMG_WIDTH, BannerConfig.MAX_TIMG_HEIGHT), Image.ANTIALIAS)
+        screenshot.thumbnail((BannerConfig.MAX_TIMG_WIDTH, BannerConfig.MAX_TIMG_HEIGHT), Image.Resampling.LANCZOS)
     screenshot.save(generated_file_path + '.png')
 
     return generated_file_path + '.png', generated_file_path + '.html'
