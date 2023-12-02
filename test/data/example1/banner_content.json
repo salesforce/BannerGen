@@ -23,7 +23,7 @@
         "type" : "button",
         "text" : "LEARN ALL ABOUT IT",
         "buttonParams" : {
-          "backgroundColor" : "#0000FF",
+          "backgroundColor" : "#000000",
           "backgroundImage" : "",
           "radius" : 8
         },
