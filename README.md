@@ -66,7 +66,7 @@ BannerGen targets to generate ad banners given a background image and multiple t
 To test with your own background images and/or different types of foreground texts, simply assign image path `--image_path` and the corresponding text types. Here we support header text input using `--header_text`, body text input using `--body_text`, and button text input using `--button_text`. You can customize the number of output banners using `--num_result` and the output path using `--output_path`.
 - For example,
   ```
-  python banner_gen.py --model_name=LayoutDETR --model_path=weights/ --image_path=test/data/example1/dark_flooring.jpg --header_text='EVERYTHING 10% OFF' --body_text='Friends & Family Savings Event' --button_text='SHOP NOW' --num_result=3 --output_path=./result/
+  python banner_gen.py --model_name=LayoutDETR --model_path=./weights/ --image_path=test/data/example1/dark_flooring.jpg --header_text='EVERYTHING 10% OFF' --body_text='Friends & Family Savings Event' --button_text='SHOP NOW' --num_result=3 --output_path=./result/
   ```
 
 ## Ethical and Responsible Use
@@ -77,10 +77,11 @@ This work refers to the [Apache License 2.0](LICENSE.txt). For LayoutDETR, refer
 
 ## Citation
   ```
-  @inproceedings{yu2023layoutdetr,
+  @article{yu2023layoutdetr,
       title={LayoutDETR: Detection Transformer Is a Good Multimodal Layout Designer},
-      author={Ning Yu and Chia-Chih Chen and Zeyuan Chen and Rui Meng and Gang Wu and Paul Josel and Juan Carlos Niebles and Caiming Xiong and Ran Xu},
-      year={2023},
+      author={Yu, Ning and Chen, Chia-Chih and Chen, Zeyuan and Meng, Rui and Wu, Gang and Josel, Paul and Niebles, Juan Carlos and Xiong, Caiming and Xu, Ran},
+      journal={arXiv preprint arXiv:2212.09877},
+      year={2023}
   }
   ```
 
