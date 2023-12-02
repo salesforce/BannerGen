@@ -4,7 +4,7 @@
     "elements" : [
       {
         "type" : "body",
-        "text" : "The woman behind the popular Instagram account sat down with us to discuss her work as a designer and her latest project.",
+        "text" : "Friends & Family Savings Event",
         "style" : {
           "fontFamily" : "Arial",
           "color" : "#FFFFFF"
@@ -12,7 +12,7 @@
       },
       {
         "type" : "header",
-        "text" : "Cait Pappas Q&A",
+        "text" : "EVERYTHING 10% OFF",
         "style" : {
           "fontFamily" : "Arial",
           "color" : "#FFFFFF",
@@ -21,7 +21,7 @@
       },
       {
         "type" : "button",
-        "text" : "READ MORE",
+        "text" : "SHOP NOW",
         "buttonParams" : {
           "backgroundColor" : "#0000FF",
           "backgroundImage" : "",
