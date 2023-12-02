@@ -2,6 +2,7 @@
 [Chia-Chih Chen](https://scholar.google.com/citations?user=0Hr1SOUAAAAJ&hl=en), [Ning Yu](https://ningyu1991.github.io/), [Zeyuan Chen](https://www.linkedin.com/in/zeyuan-chen-0253b6141/), [Shu Zhang](https://scholar.google.com/citations?user=k9zsuBIAAAAJ&hl=en), [Ran Xu](https://www.linkedin.com/in/ran-x-a2765924/)
 
 Salesforce Research
+<img src="./fig/salesforce_logo.png" width=500>
 
 ## Introduction
 Salesforce BannerGen library aims to help graphical designers
@@ -27,7 +28,7 @@ which are achieved by leveraging advanced generative AI technologies. Specifical
   - [Contact Us](#contact-us)
 
 ## Library Design ([blog](https://bannergen.placeholder))
-<img src="./LibraryDesign.png" width=500>
+<img src="./fig/LibraryDesign.png" width=500>
 
 ## Getting Started
 ### Environment Installation
