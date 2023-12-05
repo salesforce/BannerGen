@@ -27,7 +27,7 @@ def main():
                                               'RetrieveAdapter', default='LayoutDETR')
     parser.add_argument('-mp', '--model_path', help='Path to all the model files', required=True)
     parser.add_argument('-im', '--image_path', help='Image used as the banner background or foreground',
-                        default='test/data/example1/dark_flooring.jpg')
+                        default='test/data/example1/burning.jpg')
     parser.add_argument('-bcp', '--banner_content_path', help='Detailed specification of the banner content in json,'
                                                              'e.g. ad copy type, font family, font color, etc.',
                         default='test/data/example1/banner_content.json')
@@ -46,7 +46,7 @@ def main():
     args = vars(parser.parse_args())
     cfd = os.path.dirname(os.path.abspath(__file__)) # current file directory
     # different test case for RetrieveAdapter
-    if (args['model_name'] == 'RetrieveAdapter' and args['image_path'] == 'test/data/example1/dark_flooring.jpg'
+    if (args['model_name'] == 'RetrieveAdapter' and args['image_path'] == 'test/data/example1/burning.jpg'
             and args['banner_content_path'] == 'test/data/example1/banner_content.json'):
         args['image_path'] = 'test/data/example2/4_3-green-purple.png'
         args['banner_content_path'] = 'test/data/example2/banner_content.json'
