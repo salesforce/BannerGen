@@ -8,9 +8,9 @@ import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-import SmartCropping.datasets
-import SmartCropping.models
-import SmartCropping.utils
+import RetrieveAdapter.SmartCropping.datasets
+import RetrieveAdapter.SmartCropping.models
+import RetrieveAdapter.SmartCropping.utils
 
 
 def batched_predict(model, inp, coord, cell, bsize):

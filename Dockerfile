@@ -16,11 +16,4 @@ RUN apt-get install -y apt-utils 2>&1 | grep -v "debconf: delaying package confi
 RUN apt-get install -y  git
 RUN apt-get install -y --no-install-recommends openssh-server openssh-client
 RUN apt-get install -y --no-install-recommends libsm6 libxext6 libxrender-dev
-RUN ln -fs /usr/share/zoneinfo/America/Los_Angelos /etc/localtime
-RUN mkdir -p /home/Claude
-WORKDIR /home/Claude
-COPY . /home/Claude
-COPY chromedriver /usr/bin/chromedriver
-COPY activations.py /opt/conda/lib/python3.8/site-packages/transformers/activations.py
-RUN DEBIAN_FRONTEND=noninteractive apt-get --assume-yes install /home/Claude/google-chrome-stable_current_amd64.deb
 ENTRYPOINT ["/bin/sh","-c","sleep infinity"]

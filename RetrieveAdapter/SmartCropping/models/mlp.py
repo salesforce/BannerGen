@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from SmartCropping.models import register
+from RetrieveAdapter.SmartCropping.models import register
 
 
 @register('mlp')

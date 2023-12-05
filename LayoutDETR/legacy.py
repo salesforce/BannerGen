@@ -14,9 +14,9 @@ import re
 import copy
 import numpy as np
 import torch
-import dnnlib
-from torch_utils import misc
-
+import LayoutDETR.dnnlib as dnnlib
+import LayoutDETR.training as training
+import LayoutDETR.torch_utils as torch_utils
 #----------------------------------------------------------------------------
 
 def load_network_pkl(f, force_fp16=False):
@@ -66,6 +66,63 @@ class _LegacyUnpickler(pickle.Unpickler):
     def find_class(self, module, name):
         if module == 'dnnlib.tflib.network' and name == 'Network':
             return _TFNetworkStub
+        if module == 'training.networks_detr' and name == 'Generator':
+            return training.networks_detr.Generator
+        if module == 'training.networks_detr' and name == 'MLP':
+            return training.networks_detr.MLP
+        if module == 'training.networks_detr' and name == 'Discriminator':
+            return training.networks_detr.Discriminator
+        if module == 'training.detr_backbone' and name == 'Joiner':
+            return training.detr_backbone.Joiner
+        if module == 'training.detr_backbone' and name == 'Backbone':
+            return training.detr_backbone.Backbone
+        if module == 'training.detr_backbone' and name == 'FrozenBatchNorm2d':
+            return training.detr_backbone.FrozenBatchNorm2d
+        if module == 'training.detr_position_encoding' and name == 'PositionEmbeddingSine':
+            return training.detr_position_encoding.PositionEmbeddingSine
+        if module == 'training.med' and name == 'BertModel':
+            return training.med.BertModel
+        if module == 'training.med' and name == 'BertEmbeddings':
+            return training.med.BertEmbeddings
+        if module == 'training.med' and name == 'BertEncoder':
+            return training.med.BertEncoder
+        if module == 'training.med' and name == 'BertLayer':
+            return training.med.BertLayer
+        if module == 'training.med' and name == 'BertAttention':
+            return training.med.BertAttention
+        if module == 'training.med' and name == 'BertSelfAttention':
+            return training.med.BertSelfAttention
+        if module == 'training.med' and name == 'BertSelfOutput':
+            return training.med.BertSelfOutput
+        if module == 'training.med' and name == 'BertIntermediate':
+            return training.med.BertIntermediate
+        if module == 'training.med' and name == 'BertOutput':
+            return training.med.BertOutput
+        if module == 'training.med' and name == 'BertLMHeadModel':
+            return training.med.BertLMHeadModel       
+        if module == 'training.med' and name == 'BertOnlyMLMHead':
+            return training.med.BertOnlyMLMHead
+        if module == 'training.med' and name == 'BertLMPredictionHead':
+            return training.med.BertLMPredictionHead
+        if module == 'training.med' and name == 'BertPredictionHeadTransform':
+            return training.med.BertPredictionHeadTransform
+        if module == 'training.detr_transformer' and name == 'Transformer':
+            return training.detr_transformer.Transformer
+        if module == 'training.detr_transformer' and name == 'TransformerEncoder':
+            return training.detr_transformer.TransformerEncoder
+        if module == 'training.detr_transformer' and name == 'TransformerEncoderLayer':
+            return training.detr_transformer.TransformerEncoderLayer
+        if module == 'training.detr_transformer' and name == 'TransformerDecoder':
+            return training.detr_transformer.TransformerDecoder
+        if module == 'training.detr_transformer' and name == 'TransformerDecoderLayer':
+            return training.detr_transformer.TransformerDecoderLayer
+        if module == 'training.detr_transformer' and name == 'TransformerWithToken':
+            return training.detr_transformer.TransformerWithToken
+        if module == 'torch_utils.persistence' and name == '_reconstruct_persistent_obj':
+            return torch_utils.persistence._reconstruct_persistent_obj
+        if module == 'training.util' and name == 'TransformerWithToken_layoutganpp':
+            return training.util.TransformerWithToken_layoutganpp
+
         return super().find_class(module, name)
 
 #----------------------------------------------------------------------------

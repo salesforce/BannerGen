@@ -213,12 +213,7 @@ def smart_crop(image, target_width, target_height, destination, do_resize):
     #     print('Using Good Feature Tracking method')
     #     center = center_from_good_features(matrix)
     center = auto_center(matrix, target_width, target_height)
-
-    print('Found center at', center)
-
     crop_pos = exact_crop(center, width, height, target_width, target_height)
-    print('Crop rectangle is', crop_pos)
-
     cropped = original[int(crop_pos['top']): int(crop_pos['bottom']), int(crop_pos['left']): int(crop_pos['right'])]
     cv2.imwrite(destination, cropped)
 
