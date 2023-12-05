@@ -407,11 +407,7 @@ def smart_crop(image, target_width, target_height, do_resize, text_prioritized, 
 
     center, original_for_draw = auto_center(original, target_width, target_height, text_prioritized,
                                             face_prioritized, model_saliency)
-
-    print('Found center at', center)
-
     crop_pos = exact_crop(center, width, height, target_width, target_height)
-    print('Crop rectangle is', crop_pos)
 
     return original[int(crop_pos['top']): int(crop_pos['bottom']), int(crop_pos['left']): int(crop_pos['right'])]
 

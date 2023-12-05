@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from SmartCropping.models import register
+from RetrieveAdapter.SmartCropping.models import register
 
 
 def default_conv(in_channels, out_channels, kernel_size, bias=True):

@@ -7,8 +7,8 @@ from tqdm import trange
 from omegaconf import OmegaConf
 from PIL import Image
 
-from ldm.models.diffusion.ddim import DDIMSampler
-from ldm.util import instantiate_from_config
+from InstructPix2Pix.stable_diffusion.ldm.models.diffusion.ddim import DDIMSampler
+from InstructPix2Pix.stable_diffusion.ldm.util import instantiate_from_config
 
 rescale = lambda x: (x + 1.) / 2.
 

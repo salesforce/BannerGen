@@ -11,7 +11,7 @@ import contextlib
 import numpy as np
 import torch
 import warnings
-import dnnlib
+import LayoutDETR.dnnlib as dnnlib
 
 #----------------------------------------------------------------------------
 # Cached construction of constant tensors. Avoids CPU=>GPU copy when the

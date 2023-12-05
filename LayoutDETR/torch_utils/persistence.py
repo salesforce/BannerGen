@@ -20,8 +20,7 @@ import inspect
 import copy
 import uuid
 import types
-import dnnlib
-
+import LayoutDETR.dnnlib as dnnlib
 #----------------------------------------------------------------------------
 
 _version            = 6         # internal version number
@@ -216,6 +215,7 @@ def _module_to_src(module):
 def _src_to_module(src):
     r"""Get or create a Python module for the given source code.
     """
+    src = src.replace('torch_utils', 'LayoutDETR.torch_utils')
     module = _src_to_module_dict.get(src, None)
     if module is None:
         module_name = "_imported_module_" + uuid.uuid4().hex
@@ -223,6 +223,7 @@ def _src_to_module(src):
         sys.modules[module_name] = module
         _module_to_src_dict[module] = src
         _src_to_module_dict[src] = module
+        print(src)
         exec(src, module.__dict__) # pylint: disable=exec-used
     return module
 

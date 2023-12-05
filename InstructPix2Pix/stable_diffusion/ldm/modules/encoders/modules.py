@@ -5,7 +5,7 @@ import clip
 from einops import rearrange, repeat
 from transformers import CLIPTokenizer, CLIPTextModel
 import kornia
-from ldm.modules.x_transformer import Encoder, TransformerWrapper  # TODO: can we directly rely on lucidrains code and simply add this as a reuirement? --> test
+from InstructPix2Pix.stable_diffusion.ldm.modules.x_transformer import Encoder, TransformerWrapper  # TODO: can we directly rely on lucidrains code and simply add this as a reuirement? --> test
 
 import open_clip
 
@@ -290,6 +290,6 @@ class FrozenOpenCLIPEmbedder(AbstractEncoder):
         return self(text)
     
 if __name__ == "__main__":
-    from ldm.util import count_params
+    from InstructPix2Pix.stable_diffusion.ldm.util import count_params
     model = FrozenCLIPEmbedder()
     count_params(model, verbose=True)

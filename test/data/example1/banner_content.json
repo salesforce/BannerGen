@@ -1,0 +1,37 @@
+{
+  "task" : "banner",
+  "contentStyle" : {
+    "elements" : [
+      {
+        "type" : "header",
+        "text" : "The problem with burning",
+        "style" : {
+          "fontFamily" : "Arial",
+          "color" : "#FFFFFF",
+          "fontFormat" : "bold"
+        }
+      },
+      {
+        "type" : "body",
+        "text" : "Exploring the science behind combustion.",
+        "style" : {
+          "fontFamily" : "Arial",
+          "color" : "#FFFFFF"
+        }
+      },
+      {
+        "type" : "button",
+        "text" : "LEARN ALL ABOUT IT",
+        "buttonParams" : {
+          "backgroundColor" : "#000000",
+          "backgroundImage" : "",
+          "radius" : 8
+        },
+        "style" : {
+          "fontFamily" : "Bayon-Regular",
+          "color" : "#FFFFFF"
+        }
+      }
+    ]
+  }
+}

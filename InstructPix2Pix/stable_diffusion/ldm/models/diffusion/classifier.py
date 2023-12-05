@@ -10,8 +10,8 @@ from einops import rearrange
 from glob import glob
 from natsort import natsorted
 
-from ldm.modules.diffusionmodules.openaimodel import EncoderUNetModel, UNetModel
-from ldm.util import log_txt_as_img, default, ismap, instantiate_from_config
+from InstructPix2Pix.stable_diffusion.ldm.modules.diffusionmodules.openaimodel import EncoderUNetModel, UNetModel
+from InstructPix2Pix.stable_diffusion.ldm.util import log_txt_as_img, default, ismap, instantiate_from_config
 
 __models__ = {
     'class_label': EncoderUNetModel,

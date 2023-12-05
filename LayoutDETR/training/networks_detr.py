@@ -3,16 +3,16 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from training.util import TransformerWithToken_layoutganpp
+from LayoutDETR.training.util import TransformerWithToken_layoutganpp
 
-from training.blip import init_tokenizer
-from training.med import BertConfig, BertModel, BertLMHeadModel
-from training.networks_stylegan2 import Encoder, Decoder
+from LayoutDETR.training.blip import init_tokenizer
+from LayoutDETR.training.med import BertConfig, BertModel, BertLMHeadModel
+from LayoutDETR.training.networks_stylegan2 import Encoder, Decoder
 
-from detr_util.misc import nested_tensor_from_tensor_list
-from training.detr_position_encoding import PositionEmbeddingSine
-from training.detr_backbone import Backbone, Joiner
-from training.detr_transformer import Transformer, TransformerWithToken, TransformerDecoderLayer, TransformerDecoder
+from LayoutDETR.detr_util.misc import nested_tensor_from_tensor_list
+from LayoutDETR.training.detr_position_encoding import PositionEmbeddingSine
+from LayoutDETR.training.detr_backbone import Backbone, Joiner
+from LayoutDETR.training.detr_transformer import Transformer, TransformerWithToken, TransformerDecoderLayer, TransformerDecoder
 
 def merge_lists(lists):
     ret = []
