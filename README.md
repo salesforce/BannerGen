@@ -32,12 +32,14 @@ which are achieved by leveraging advanced generative AI technologies. Specifical
 
 ## Getting Started
 ### Environment Installation
-This library has been tested on Ubuntu 20.04 including Python 3.8 and PyTorch 2.1.0 environment. A single A100 GPU is employed for banner generation. Nevertheless, the peak GPU memory usage is 18GB, any NVIDIA GPU with larger memory should suffice. For more information about our base image configuration, please refer to the Dockerfile.
+This library has been tested on Ubuntu 20.04 including Python 3.8 and PyTorch 2.1.0 environment. A single A100 GPU is employed for banner generation. Nevertheless, the peak GPU memory usage is 18GB, any NVIDIA GPU with larger memory should suffice.
 
 To install the environment, use the following command lines:
 ```
 git clone https://github.com/salesforce/BannerGen.git
 cd BannerGen
+conda env create -f environment.yaml
+conda activate bannergen
 chmod +x setup.sh
 ./setup.sh
 ```
