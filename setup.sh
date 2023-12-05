@@ -1,9 +1,6 @@
 #! /bin/bash
 # Setup BannerGen headless Chrome browser and Python libraries
 
-conda env create -f environment.yaml
-conda activate bannergen
-conda init bash
 ln -fs /usr/share/zoneinfo/America/Los_Angelos /etc/localtime
 cp executables/chromedriver /usr/bin/chromedriver
 apt-get update
