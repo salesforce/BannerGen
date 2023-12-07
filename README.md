@@ -23,11 +23,12 @@ which are achieved by leveraging advanced generative AI technologies. Specifical
     - [Environment Installation](#environment-installation)
     - [Model Weights Download](#model-weights-download)
     - [Usage](#usage)
+  - [Quick Results](#quick-results)
   - [License](#license)
   - [Citation](#citation)
   - [Contact Us](#contact-us)
 
-## Library Design ([blog](https://bannergen.placeholder))
+## Library Design ([blog](https://blog.salesforceairesearch.com/bannergen-a-library-for-multi-modality-banner-generation/))
 <img src="./fig/LibraryDesign.png" width=500>
 
 ## Getting Started
@@ -75,6 +76,11 @@ To test with your own background images and/or different types of foreground tex
   --num_result=6 \
   --output_path=./result/
   ```
+
+## Quick Result
+<img src="./fig/results_LayoutDETR_LayoutInstructPix2Pix.gif" width=500>
+<img src="./fig/results_RetrieveAdapter_1.gif" width=250> <img src="./fig/results_RetrieveAdapter_2.gif" width=250>
+<figcaption>Layout generation and text rendering results. Top left: LayoutDETR. Top right: LayoutInstructPix2Pix. Bottom two: Framed Template Retrieve Adapter.</figcaption>
 
 ## License
 This work refers to the [Apache License 2.0](LICENSE.txt). For LayoutDETR, refer to their license [here](https://github.com/salesforce/LayoutDETR/blob/main/LICENSE.txt). For LayoutInstructPix2Pix, refer to InstructPix2Pix's license [here](https://github.com/timothybrooks/instruct-pix2pix/blob/main/LICENSE). We do NOT own the licenses to the fonts stored in `RetrieveAdapter/templates/css/fonts`. To use the fonts in your own work, please acquire the employed font licenses from the respective owners.
