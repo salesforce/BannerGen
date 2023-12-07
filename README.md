@@ -78,8 +78,8 @@ To test with your own background images and/or different types of foreground tex
   ```
 
 ## Quick Result
-<img src="./fig/results_LayoutDETR_LayoutInstructPix2Pix.gif" width=500>
-<img src="./fig/results_RetrieveAdapter_1.gif" width=250> <img src="./fig/results_RetrieveAdapter_2.gif" width=250>
+<img src="./fig/results_LayoutDETR_LayoutInstructPix2Pix.gif" width=1000>
+<pre><img src="./fig/results_RetrieveAdapter_1.gif" width=450>    <img src="./fig/results_RetrieveAdapter_2.gif" width=450></pre>
 <figcaption>Layout generation and text rendering results. Top left: LayoutDETR. Top right: LayoutInstructPix2Pix. Bottom two: Framed Template Retrieve Adapter.</figcaption>
 
 ## License
